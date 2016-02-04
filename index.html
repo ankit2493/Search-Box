@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <script src="searchBox.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="searchBox.css">
+</head>
+
+<body>
+    <script>
+    var data = {
+        "Alabama": [32.75041, -86.75026],
+        "Alaska": [64.00028, -150.00027],
+        "Anhui Sheng": [31.91667, 117.16667],
+        "Arizona": [34.5003, -111.50098],
+        "Arkansas": [34.75037, -92.50044],
+        "Assam": [26, 93],
+        "Azad Kashmir": [33.94718, 73.9104],
+        "Balochistan": [28.47849, 65.64355],
+        "Beijing Shi": [39.91691, 116.39706],
+        "California": [37.25022, -119.75126],
+        "Central Province": [7.33333, 80.75],
+        "Chongqing Shi": [30.08333, 107.83333],
+        "Colorado": [39.00027, -105.50083],
+        "Connecticut": [41.66704, -72.66648],
+        "Delaware": [39.00039, -75.49992],
+        "District of Columbia": [38.91706, -77.00025],
+        "Eastern Province": [8.60614, 81.20201],
+        "Federally Administered Tribal Areas": [33.01455, 69.99925],
+        "Florida": [28.75054, -82.5001],
+        "Fujian Sheng": [26.25, 118],
+        "Gansu Sheng": [37.75, 102.75],
+        "Georgia": [32.75042, -83.50018],
+        "Goa": [15.33333, 74.08333],
+        "Guangdong Sheng": [23.5, 113.25],
+        "Guangxi Zhuangzu Zizhiqu": [24, 109],
+        "Guizhou Sheng": [27, 107],
+        "Hainan Sheng": [19.25, 109.75],
+        "Hawaii": [20.75028, -156.50027],
+        "Hebei Sheng": [39, 115.66667],
+        "Heilongjiang Sheng": [47.75, 128],
+        "Henan Sheng": [34, 113.66667],
+        "Hubei Sheng": [31, 112.25],
+        "Hunan Sheng": [27.66667, 111.75],
+        "Idaho": [44.5002, -114.25118],
+        "Illinois": [40.00032, -89.25037],
+        "Indiana": [40.00032, -86.25027],
+        "Inner Mongolia Autonomous Region": [43.5, 114.75],
+        "Iowa": [42.00027, -93.50049],
+        "Islamabad Capital Territory": [33.71039, 73.13382],
+        "Jiangsu Sheng": [33, 119.83333],
+        "Jiangxi Sheng": [27.66667, 115.66667],
+        "Jilin Sheng": [43.58333, 126.16667],
+        "Kansas": [38.50029, -98.50063],
+        "Kentucky": [38.20042, -84.87762],
+        "Khyber Pakhtunkhwa Province": [34.45993, 72.50237],
+        "Liaoning Sheng": [41.25, 122.66667],
+        "Louisiana": [31.00047, -92.0004],
+        "Madhya Pradesh": [23.5, 78.5],
+        "Maine": [45.50032, -69.24977],
+        "Manipur": [25, 94],
+        "Maryland": [39.00039, -76.74997],
+        "Massachusetts": [42.36565, -71.10832],
+        "Meghalaya": [25.5, 91.33333],
+        "Michigan": [44.25029, -85.50033],
+        "Minnesota": [46.25024, -94.25055],
+        "Mississippi": [32.75041, -89.75036],
+        "Missouri": [38.25031, -92.50046],
+        "Mizoram": [23, 93],
+        "Montana": [47.00025, -109.75102],
+        "National Capital Territory of Delhi": [28.6667, 77.1],
+        "Nebraska": [41.50028, -99.75067],
+        "Nevada": [39.25021, -116.75119],
+        "New Hampshire": [43.66702, -71.4998],
+        "New Jersey": [40.16706, -74.49987],
+        "New Mexico": [34.50034, -106.00085],
+        "New York": [43.00035, -75.4999],
+        "Ningxia Huizu Zizhiqu": [37.25, 106],
+        "North Carolina": [35.50069, -80.00032],
+        "North Central Province": [8.33333, 80.5],
+        "North Dakota": [47.50027, -100.00068],
+        "North Western Province": [7.75, 80.16667],
+        "Northern Areas": [36, 75],
+        "Northern Province": [9.16667, 80.41667],
+        "Ohio": [40.25034, -83.00018],
+        "Oklahoma": [35.49209, -97.50328],
+        "Oregon": [44.00013, -120.50139],
+        "Pennsylvania": [40.27245, -76.90567],
+        "Province of Sabaragamuwa": [6.75, 80.5],
+        "Province of Uva": [6.98472, 81.05639],
+        "Punjab": [30.86017, 72.31976],
+        "Qinghai Sheng": [36, 96],
+        "Rhode Island": [41.75038, -71.49978],
+        "Shaanxi": [36, 109],
+        "Shandong Sheng": [36.33333, 118.25],
+        "Shanghai Shi": [31.16667, 121.41667],
+        "Shanxi Sheng": [37.66667, 112.25],
+        "Sichuan Sheng": [30.5, 102.66667],
+        "Sikkim": [27.75, 88.5],
+        "Sindh": [26.13456, 68.7696],
+        "South Carolina": [34.00043, -81.00009],
+        "South Dakota": [44.50026, -100.25069],
+        "Southern Province": [6.16667, 80.75],
+        "State of Andhra Pradesh": [15.83333, 79.75],
+        "State of Arunachal Pradesh": [27.06, 93.37],
+        "State of Bihar": [25.75, 85.75],
+        "State of Chhattisgarh": [21.5, 82],
+        "State of Gujarat": [23, 71.75],
+        "State of Haryana": [29.25, 76.33333],
+        "State of Himachal Pradesh": [31.91667, 77.25],
+        "State of Jammu and Kashmir": [33.91667, 76.66667],
+        "State of Jharkhand": [23.75, 85.5],
+        "State of Karnataka": [14.66667, 75.83333],
+        "State of Kerala": [10.41667, 76.5],
+        "State of Maharashtra": [19.5, 76],
+        "State of Nagaland": [26.08333, 94.5],
+        "State of Odisha": [20.5, 84.41667],
+        "State of Punjab": [30.91667, 75.41667],
+        "State of Rajasthan": [26.58333, 73.83333],
+        "State of Tamil Nadu": [11, 78.33333],
+        "State of Uttarakhand": [30.25, 79.25],
+        "Telangana": [17.83333, 79.08333],
+        "Tennessee": [35.75035, -86.25027],
+        "Texas": [31.25044, -99.25061],
+        "Tianjin Shi": [39.33333, 117.33333],
+        "Tibet Autonomous Region": [31.66667, 88],
+        "Tripura": [24, 92],
+        "Union Territory of Andaman and Nicobar Islands": [11.70065, 92.67517],
+        "Union Territory of Chandigarh": [30.72778, 76.77778],
+        "Union Territory of Dadra and Nagar Haveli": [20.16667, 73.03333],
+        "Union Territory of Daman and Diu": [20.4, 72.87],
+        "Union Territory of Lakshadweep": [10.93896, 72.28665],
+        "Union Territory of Puducherry": [11.93333, 79.81667],
+        "Utah": [39.25024, -111.75103],
+        "Uttar Pradesh": [27.25, 80.75],
+        "Vermont": [44.00034, -72.74983],
+        "Virginia": [37.54812, -77.44675],
+        "Washington": [47.50012, -120.50147],
+        "West Bengal": [24, 88],
+        "West Virginia": [38.50038, -80.50009],
+        "Western Province": [6.83333, 80.08333],
+        "Wisconsin": [44.50024, -90.00041],
+        "Wyoming": [43.00024, -107.5009],
+        "Xinjiang Uygur Zizhiqu": [41.5, 85.5],
+        "Yunnan Sheng": [25, 101.5],
+        "Zhejiang Sheng": [29.16667, 120]
+    };
+
+    var ctx = {
+        "name": "I am dummy context"
+    };
+
+    var sb = new SearchBox(data, function(result, args) {
+        document.getElementById("msgbox").innerHTML = result.d + "<br/>" + JSON.stringify(result.v) + "<br/>" + args.msg + this.name
+    }, {
+        "msg": "Hi, "
+    }, ctx);
+
+    sb.on("clear", function() {
+        console.log("I am empty");
+    });
+
+    document.body.appendChild(sb);
+    </script>
+    <p id="msgbox"></p>
+</body>
+
+</html>
